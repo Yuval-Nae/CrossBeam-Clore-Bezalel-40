@@ -2,9 +2,9 @@
 
 Public exhibition website for 41 artists. Mobile-first, with English / Hebrew / Arabic.
 
-Hosted on **personal** GitHub Pages under `Yuval-Nae` (not Lightricks):
+Hosted on **personal** GitHub Pages under `Yuval-Nae` (not Lightricks), at:
 
-`https://yuval-nae.github.io/CrossBeam-Clore-Bezalel-40/`
+`https://crossbeam.info`
 
 ## Local preview
 
@@ -40,4 +40,4 @@ python3 scripts/csv_to_artists_json.py content/artists.csv
 
 ## QR code
 
-Point the printed QR code at the GitHub Pages URL above (home page). Visitors pick a language and open any artist.
+Point the printed QR code at `https://crossbeam.info`. Visitors pick a language and open any artist.
