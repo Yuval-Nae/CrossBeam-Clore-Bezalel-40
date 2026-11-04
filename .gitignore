@@ -1,0 +1,5 @@
+.DS_Store
+content/artists.csv
+.venv/
+__pycache__/
+*.pyc

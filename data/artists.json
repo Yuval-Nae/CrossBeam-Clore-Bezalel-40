@@ -1,0 +1,1146 @@
+{
+  "exhibition": {
+    "en": {
+      "name": "CrossBeam · Clore · Bezalel 40",
+      "tagline": "Exhibition — artist stories",
+      "homeIntro": "Scan the QR code or browse below to read about each of the 41 artists. Choose your language in the top bar.",
+      "artistsHeading": "Artists",
+      "backHome": "All artists",
+      "bioLabel": "About the artist",
+      "galleryLabel": "Gallery",
+      "notFound": "Artist not found.",
+      "loading": "Loading…"
+    },
+    "he": {
+      "name": "CrossBeam · Clore · בצלאל 40",
+      "tagline": "תערוכה — סיפורי האמנים",
+      "homeIntro": "סרקו את קוד ה־QR או דפדפו למטה לקריאה על כל אחד מ־41 האמנים. בחרו שפה בסרגל העליון.",
+      "artistsHeading": "אמנים",
+      "backHome": "כל האמנים",
+      "bioLabel": "על האמן",
+      "galleryLabel": "גלריה",
+      "notFound": "האמן לא נמצא.",
+      "loading": "טוען…"
+    },
+    "ar": {
+      "name": "CrossBeam · Clore · بتسلئيل 40",
+      "tagline": "معرض — قصص الفنانين",
+      "homeIntro": "امسح رمز الاستجابة السريعة أو تصفح أدناه لقراءة المزيد عن كل فنان من أصل 41. اختر اللغة من الشريط العلوي.",
+      "artistsHeading": "الفنانون",
+      "backHome": "كل الفنانين",
+      "bioLabel": "عن الفنان",
+      "galleryLabel": "معرض الصور",
+      "notFound": "الفنان غير موجود.",
+      "loading": "جارٍ التحميل…"
+    }
+  },
+  "artists": [
+    {
+      "id": "artist-01",
+      "slug": "artist-01",
+      "cover": "assets/artists/artist-01-cover.svg",
+      "gallery": [
+        "assets/artists/artist-01-1.svg",
+        "assets/artists/artist-01-2.svg"
+      ],
+      "en": {
+        "title": "Artist 01",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 01. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 01. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 01",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 01. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 01. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 01",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 01. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 01. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-02",
+      "slug": "artist-02",
+      "cover": "assets/artists/artist-02-cover.svg",
+      "gallery": [
+        "assets/artists/artist-02-1.svg",
+        "assets/artists/artist-02-2.svg"
+      ],
+      "en": {
+        "title": "Artist 02",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 02. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 02. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 02",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 02. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 02. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 02",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 02. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 02. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-03",
+      "slug": "artist-03",
+      "cover": "assets/artists/artist-03-cover.svg",
+      "gallery": [
+        "assets/artists/artist-03-1.svg",
+        "assets/artists/artist-03-2.svg"
+      ],
+      "en": {
+        "title": "Artist 03",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 03. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 03. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 03",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 03. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 03. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 03",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 03. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 03. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-04",
+      "slug": "artist-04",
+      "cover": "assets/artists/artist-04-cover.svg",
+      "gallery": [
+        "assets/artists/artist-04-1.svg",
+        "assets/artists/artist-04-2.svg"
+      ],
+      "en": {
+        "title": "Artist 04",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 04. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 04. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 04",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 04. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 04. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 04",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 04. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 04. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-05",
+      "slug": "artist-05",
+      "cover": "assets/artists/artist-05-cover.svg",
+      "gallery": [
+        "assets/artists/artist-05-1.svg",
+        "assets/artists/artist-05-2.svg"
+      ],
+      "en": {
+        "title": "Artist 05",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 05. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 05. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 05",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 05. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 05. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 05",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 05. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 05. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-06",
+      "slug": "artist-06",
+      "cover": "assets/artists/artist-06-cover.svg",
+      "gallery": [
+        "assets/artists/artist-06-1.svg",
+        "assets/artists/artist-06-2.svg"
+      ],
+      "en": {
+        "title": "Artist 06",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 06. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 06. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 06",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 06. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 06. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 06",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 06. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 06. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-07",
+      "slug": "artist-07",
+      "cover": "assets/artists/artist-07-cover.svg",
+      "gallery": [
+        "assets/artists/artist-07-1.svg",
+        "assets/artists/artist-07-2.svg"
+      ],
+      "en": {
+        "title": "Artist 07",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 07. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 07. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 07",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 07. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 07. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 07",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 07. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 07. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-08",
+      "slug": "artist-08",
+      "cover": "assets/artists/artist-08-cover.svg",
+      "gallery": [
+        "assets/artists/artist-08-1.svg",
+        "assets/artists/artist-08-2.svg"
+      ],
+      "en": {
+        "title": "Artist 08",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 08. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 08. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 08",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 08. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 08. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 08",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 08. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 08. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-09",
+      "slug": "artist-09",
+      "cover": "assets/artists/artist-09-cover.svg",
+      "gallery": [
+        "assets/artists/artist-09-1.svg",
+        "assets/artists/artist-09-2.svg"
+      ],
+      "en": {
+        "title": "Artist 09",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 09. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 09. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 09",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 09. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 09. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 09",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 09. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 09. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-10",
+      "slug": "artist-10",
+      "cover": "assets/artists/artist-10-cover.svg",
+      "gallery": [
+        "assets/artists/artist-10-1.svg",
+        "assets/artists/artist-10-2.svg"
+      ],
+      "en": {
+        "title": "Artist 10",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 10. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 10. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 10",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 10. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 10. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 10",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 10. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 10. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-11",
+      "slug": "artist-11",
+      "cover": "assets/artists/artist-11-cover.svg",
+      "gallery": [
+        "assets/artists/artist-11-1.svg",
+        "assets/artists/artist-11-2.svg"
+      ],
+      "en": {
+        "title": "Artist 11",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 11. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 11. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 11",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 11. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 11. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 11",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 11. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 11. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-12",
+      "slug": "artist-12",
+      "cover": "assets/artists/artist-12-cover.svg",
+      "gallery": [
+        "assets/artists/artist-12-1.svg",
+        "assets/artists/artist-12-2.svg"
+      ],
+      "en": {
+        "title": "Artist 12",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 12. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 12. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 12",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 12. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 12. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 12",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 12. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 12. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-13",
+      "slug": "artist-13",
+      "cover": "assets/artists/artist-13-cover.svg",
+      "gallery": [
+        "assets/artists/artist-13-1.svg",
+        "assets/artists/artist-13-2.svg"
+      ],
+      "en": {
+        "title": "Artist 13",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 13. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 13. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 13",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 13. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 13. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 13",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 13. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 13. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-14",
+      "slug": "artist-14",
+      "cover": "assets/artists/artist-14-cover.svg",
+      "gallery": [
+        "assets/artists/artist-14-1.svg",
+        "assets/artists/artist-14-2.svg"
+      ],
+      "en": {
+        "title": "Artist 14",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 14. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 14. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 14",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 14. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 14. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 14",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 14. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 14. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-15",
+      "slug": "artist-15",
+      "cover": "assets/artists/artist-15-cover.svg",
+      "gallery": [
+        "assets/artists/artist-15-1.svg",
+        "assets/artists/artist-15-2.svg"
+      ],
+      "en": {
+        "title": "Artist 15",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 15. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 15. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 15",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 15. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 15. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 15",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 15. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 15. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-16",
+      "slug": "artist-16",
+      "cover": "assets/artists/artist-16-cover.svg",
+      "gallery": [
+        "assets/artists/artist-16-1.svg",
+        "assets/artists/artist-16-2.svg"
+      ],
+      "en": {
+        "title": "Artist 16",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 16. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 16. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 16",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 16. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 16. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 16",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 16. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 16. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-17",
+      "slug": "artist-17",
+      "cover": "assets/artists/artist-17-cover.svg",
+      "gallery": [
+        "assets/artists/artist-17-1.svg",
+        "assets/artists/artist-17-2.svg"
+      ],
+      "en": {
+        "title": "Artist 17",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 17. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 17. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 17",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 17. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 17. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 17",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 17. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 17. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-18",
+      "slug": "artist-18",
+      "cover": "assets/artists/artist-18-cover.svg",
+      "gallery": [
+        "assets/artists/artist-18-1.svg",
+        "assets/artists/artist-18-2.svg"
+      ],
+      "en": {
+        "title": "Artist 18",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 18. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 18. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 18",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 18. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 18. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 18",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 18. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 18. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-19",
+      "slug": "artist-19",
+      "cover": "assets/artists/artist-19-cover.svg",
+      "gallery": [
+        "assets/artists/artist-19-1.svg",
+        "assets/artists/artist-19-2.svg"
+      ],
+      "en": {
+        "title": "Artist 19",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 19. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 19. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 19",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 19. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 19. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 19",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 19. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 19. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-20",
+      "slug": "artist-20",
+      "cover": "assets/artists/artist-20-cover.svg",
+      "gallery": [
+        "assets/artists/artist-20-1.svg",
+        "assets/artists/artist-20-2.svg"
+      ],
+      "en": {
+        "title": "Artist 20",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 20. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 20. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 20",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 20. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 20. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 20",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 20. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 20. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-21",
+      "slug": "artist-21",
+      "cover": "assets/artists/artist-21-cover.svg",
+      "gallery": [
+        "assets/artists/artist-21-1.svg",
+        "assets/artists/artist-21-2.svg"
+      ],
+      "en": {
+        "title": "Artist 21",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 21. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 21. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 21",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 21. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 21. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 21",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 21. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 21. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-22",
+      "slug": "artist-22",
+      "cover": "assets/artists/artist-22-cover.svg",
+      "gallery": [
+        "assets/artists/artist-22-1.svg",
+        "assets/artists/artist-22-2.svg"
+      ],
+      "en": {
+        "title": "Artist 22",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 22. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 22. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 22",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 22. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 22. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 22",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 22. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 22. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-23",
+      "slug": "artist-23",
+      "cover": "assets/artists/artist-23-cover.svg",
+      "gallery": [
+        "assets/artists/artist-23-1.svg",
+        "assets/artists/artist-23-2.svg"
+      ],
+      "en": {
+        "title": "Artist 23",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 23. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 23. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 23",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 23. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 23. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 23",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 23. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 23. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-24",
+      "slug": "artist-24",
+      "cover": "assets/artists/artist-24-cover.svg",
+      "gallery": [
+        "assets/artists/artist-24-1.svg",
+        "assets/artists/artist-24-2.svg"
+      ],
+      "en": {
+        "title": "Artist 24",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 24. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 24. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 24",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 24. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 24. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 24",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 24. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 24. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-25",
+      "slug": "artist-25",
+      "cover": "assets/artists/artist-25-cover.svg",
+      "gallery": [
+        "assets/artists/artist-25-1.svg",
+        "assets/artists/artist-25-2.svg"
+      ],
+      "en": {
+        "title": "Artist 25",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 25. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 25. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 25",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 25. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 25. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 25",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 25. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 25. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-26",
+      "slug": "artist-26",
+      "cover": "assets/artists/artist-26-cover.svg",
+      "gallery": [
+        "assets/artists/artist-26-1.svg",
+        "assets/artists/artist-26-2.svg"
+      ],
+      "en": {
+        "title": "Artist 26",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 26. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 26. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 26",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 26. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 26. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 26",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 26. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 26. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-27",
+      "slug": "artist-27",
+      "cover": "assets/artists/artist-27-cover.svg",
+      "gallery": [
+        "assets/artists/artist-27-1.svg",
+        "assets/artists/artist-27-2.svg"
+      ],
+      "en": {
+        "title": "Artist 27",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 27. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 27. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 27",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 27. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 27. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 27",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 27. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 27. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-28",
+      "slug": "artist-28",
+      "cover": "assets/artists/artist-28-cover.svg",
+      "gallery": [
+        "assets/artists/artist-28-1.svg",
+        "assets/artists/artist-28-2.svg"
+      ],
+      "en": {
+        "title": "Artist 28",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 28. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 28. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 28",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 28. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 28. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 28",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 28. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 28. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-29",
+      "slug": "artist-29",
+      "cover": "assets/artists/artist-29-cover.svg",
+      "gallery": [
+        "assets/artists/artist-29-1.svg",
+        "assets/artists/artist-29-2.svg"
+      ],
+      "en": {
+        "title": "Artist 29",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 29. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 29. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 29",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 29. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 29. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 29",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 29. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 29. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-30",
+      "slug": "artist-30",
+      "cover": "assets/artists/artist-30-cover.svg",
+      "gallery": [
+        "assets/artists/artist-30-1.svg",
+        "assets/artists/artist-30-2.svg"
+      ],
+      "en": {
+        "title": "Artist 30",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 30. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 30. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 30",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 30. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 30. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 30",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 30. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 30. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-31",
+      "slug": "artist-31",
+      "cover": "assets/artists/artist-31-cover.svg",
+      "gallery": [
+        "assets/artists/artist-31-1.svg",
+        "assets/artists/artist-31-2.svg"
+      ],
+      "en": {
+        "title": "Artist 31",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 31. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 31. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 31",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 31. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 31. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 31",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 31. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 31. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-32",
+      "slug": "artist-32",
+      "cover": "assets/artists/artist-32-cover.svg",
+      "gallery": [
+        "assets/artists/artist-32-1.svg",
+        "assets/artists/artist-32-2.svg"
+      ],
+      "en": {
+        "title": "Artist 32",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 32. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 32. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 32",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 32. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 32. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 32",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 32. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 32. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-33",
+      "slug": "artist-33",
+      "cover": "assets/artists/artist-33-cover.svg",
+      "gallery": [
+        "assets/artists/artist-33-1.svg",
+        "assets/artists/artist-33-2.svg"
+      ],
+      "en": {
+        "title": "Artist 33",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 33. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 33. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 33",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 33. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 33. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 33",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 33. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 33. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-34",
+      "slug": "artist-34",
+      "cover": "assets/artists/artist-34-cover.svg",
+      "gallery": [
+        "assets/artists/artist-34-1.svg",
+        "assets/artists/artist-34-2.svg"
+      ],
+      "en": {
+        "title": "Artist 34",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 34. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 34. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 34",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 34. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 34. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 34",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 34. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 34. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-35",
+      "slug": "artist-35",
+      "cover": "assets/artists/artist-35-cover.svg",
+      "gallery": [
+        "assets/artists/artist-35-1.svg",
+        "assets/artists/artist-35-2.svg"
+      ],
+      "en": {
+        "title": "Artist 35",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 35. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 35. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 35",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 35. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 35. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 35",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 35. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 35. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-36",
+      "slug": "artist-36",
+      "cover": "assets/artists/artist-36-cover.svg",
+      "gallery": [
+        "assets/artists/artist-36-1.svg",
+        "assets/artists/artist-36-2.svg"
+      ],
+      "en": {
+        "title": "Artist 36",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 36. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 36. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 36",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 36. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 36. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 36",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 36. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 36. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-37",
+      "slug": "artist-37",
+      "cover": "assets/artists/artist-37-cover.svg",
+      "gallery": [
+        "assets/artists/artist-37-1.svg",
+        "assets/artists/artist-37-2.svg"
+      ],
+      "en": {
+        "title": "Artist 37",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 37. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 37. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 37",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 37. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 37. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 37",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 37. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 37. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-38",
+      "slug": "artist-38",
+      "cover": "assets/artists/artist-38-cover.svg",
+      "gallery": [
+        "assets/artists/artist-38-1.svg",
+        "assets/artists/artist-38-2.svg"
+      ],
+      "en": {
+        "title": "Artist 38",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 38. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 38. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 38",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 38. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 38. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 38",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 38. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 38. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-39",
+      "slug": "artist-39",
+      "cover": "assets/artists/artist-39-cover.svg",
+      "gallery": [
+        "assets/artists/artist-39-1.svg",
+        "assets/artists/artist-39-2.svg"
+      ],
+      "en": {
+        "title": "Artist 39",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 39. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 39. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 39",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 39. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 39. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 39",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 39. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 39. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-40",
+      "slug": "artist-40",
+      "cover": "assets/artists/artist-40-cover.svg",
+      "gallery": [
+        "assets/artists/artist-40-1.svg",
+        "assets/artists/artist-40-2.svg"
+      ],
+      "en": {
+        "title": "Artist 40",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 40. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 40. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 40",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 40. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 40. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 40",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 40. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 40. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    },
+    {
+      "id": "artist-41",
+      "slug": "artist-41",
+      "cover": "assets/artists/artist-41-cover.svg",
+      "gallery": [
+        "assets/artists/artist-41-1.svg",
+        "assets/artists/artist-41-2.svg"
+      ],
+      "en": {
+        "title": "Artist 41",
+        "subtitle": "Placeholder exhibition work",
+        "bio": "Short biography placeholder for Artist 41. Replace this with a brief introduction of the artist.",
+        "body": "This is placeholder long-form text for Artist 41. It stands in for about 200 words describing the work, process, and themes. Replace this entire section with the artist statement or curatorial text from your Google Sheet. Visitors scanning the QR code will land on the home page and navigate here to read more. Keep paragraphs readable on mobile. Add a second paragraph if the text is longer. When real content arrives, English, Hebrew, and Arabic should stay aligned by artist id."
+      },
+      "he": {
+        "title": "אמן 41",
+        "subtitle": "יצירה לדוגמה לתערוכה",
+        "bio": "ביוגרפיה קצרה לדוגמה עבור אמן 41. יש להחליף בטקסט האמיתי מהגיליון.",
+        "body": "זהו טקסט ארוך לדוגמה עבור אמן 41. הוא מחליף כ־200 מילים על היצירה, התהליך והנושאים. יש להחליף את כל הקטע בטקסט האמן או בטקסט האוצרותי מהגיליון. מבקרים שיסרקו את קוד ה־QR יגיעו לדף הבית ויוכלו לנווט לכאן לקריאה נוספת. שמרו על פסקאות קריאות במובייל. כשהתוכן האמיתי יגיע, יש לשמור על התאמה בין אנגלית, עברית וערבית לפי מזהה האמן."
+      },
+      "ar": {
+        "title": "فنان 41",
+        "subtitle": "عمل تجريبي للمعرض",
+        "bio": "سيرة قصيرة مؤقتة للفنان 41. استبدلها بالنص الحقيقي من الجدول.",
+        "body": "هذا نص طويل مؤقت للفنان 41. وهو بديل لنحو 200 كلمة تصف العمل والعملية والموضوعات. استبدل هذا القسم بالكامل بنص الفنان أو النص التنسيقي من جدول جوجل. الزوار الذين يمسحون رمز الاستجابة السريعة سيصلون إلى الصفحة الرئيسية ويمكنهم الانتقال إلى هنا للقراءة. حافظ على فقرات واضحة على الهاتف. عند وصول المحتوى الحقيقي، اجعل الإنجليزية والعبرية والعربية متوافقة عبر معرّف الفنان."
+      }
+    }
+  ]
+}
