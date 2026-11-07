@@ -1,5 +1,6 @@
 .DS_Store
 content/artists.csv
+CB40-book/
 .venv/
 __pycache__/
 *.pyc
