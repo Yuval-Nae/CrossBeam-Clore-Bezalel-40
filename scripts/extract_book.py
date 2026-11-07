@@ -6,6 +6,7 @@ from __future__ import annotations
 import json
 import re
 import subprocess
+import sys
 import unicodedata
 import zipfile
 from pathlib import Path
@@ -315,10 +316,179 @@ def build() -> list[dict]:
     return artists
 
 
-def convert(source: Path, dest: Path, max_edge: int) -> None:
+def parse_transform(value: str | None) -> tuple[float, float, float, float, float, float]:
+    parts = [float(part) for part in (value or "1 0 0 1 0 0").split()]
+    while len(parts) < 6:
+        parts.append(0.0)
+    return tuple(parts[:6])  # type: ignore[return-value]
+
+
+def path_frames(rect: ET.Element) -> list[tuple[float, float, float, float]]:
+    frames = []
+    for el in rect:
+        if local(el.tag) != "Properties":
+            continue
+        for path in el.iter():
+            if local(path.tag) != "GeometryPathType":
+                continue
+            points = []
+            for point in path.iter():
+                if local(point.tag) == "PathPointType" and "Anchor" in point.attrib:
+                    x, y = (float(part) for part in point.attrib["Anchor"].split())
+                    points.append((x, y))
+            if len(points) < 2:
+                continue
+            xs = [point[0] for point in points]
+            ys = [point[1] for point in points]
+            frames.append((min(xs), min(ys), max(xs), max(ys)))
+        break
+    return frames
+
+
+def portrait_crops(artists: list[dict]) -> dict[str, tuple[float, float, float, float, bool]]:
+    """Visible rectangle of each interview portrait, as fractions of the source image."""
+
+    crops: dict[str, tuple[float, float, float, float, bool]] = {}
+    with zipfile.ZipFile(IDML) as zf:
+        styles = style_map(zf)
+        designmap = ET.fromstring(zf.read("designmap.xml"))
+        sources = [
+            el.attrib["src"]
+            for el in designmap
+            if local(el.tag) == "Spread" and el.attrib.get("src", "").startswith("Spreads/")
+        ]
+        index = 0
+        for src in sources:
+            spread = spread_items(zf, styles, src)
+            if not is_artist(spread):
+                continue
+            artist = artists[index]
+            index += 1
+            root = ET.fromstring(zf.read(src))
+            target = unicodedata.normalize("NFC", artist["portrait_file"])
+            candidates = []
+            for el in root.iter():
+                if local(el.tag) != "Rectangle":
+                    continue
+                image = None
+                link = ""
+                bounds = None
+                for child in el.iter():
+                    if local(child.tag) == "Image" and image is None:
+                        image = child
+                    if local(child.tag) == "Link" and not link:
+                        link = unicodedata.normalize("NFC", unquote(child.attrib.get("LinkResourceURI", "").split("/")[-1]))
+                    if local(child.tag) == "GraphicBounds" and bounds is None:
+                        bounds = child
+                if image is None or bounds is None or link != target:
+                    continue
+                a, b, c, d, tx, ty = parse_transform(image.attrib.get("ItemTransform"))
+                if abs(b) > 1e-4 or abs(c) > 1e-4 or a == 0 or d == 0:
+                    continue
+                left, top, right, bottom = (float(bounds.attrib[key]) for key in ("Left", "Top", "Right", "Bottom"))
+                width = right - left
+                height = bottom - top
+                if width == 0 or height == 0:
+                    continue
+                for frame_left, frame_top, frame_right, frame_bottom in path_frames(el):
+                    x0 = ((frame_left - tx) / a - left) / width
+                    x1 = ((frame_right - tx) / a - left) / width
+                    y0 = ((frame_top - ty) / d - top) / height
+                    y1 = ((frame_bottom - ty) / d - top) / height
+                    if x0 > x1:
+                        x0, x1 = x1, x0
+                    if y0 > y1:
+                        y0, y1 = y1, y0
+                    crop_left, crop_right = max(0.0, x0), min(1.0, x1)
+                    crop_top, crop_bottom = max(0.0, y0), min(1.0, y1)
+                    if crop_right - crop_left < 0.05 or crop_bottom - crop_top < 0.05:
+                        continue
+                    area = abs((frame_right - frame_left) * (frame_bottom - frame_top))
+                    candidates.append((area, crop_left, crop_top, crop_right, crop_bottom, a < 0))
+            if not candidates:
+                continue
+            _area, x0, y0, x1, y1, flip_x = max(candidates, key=lambda item: item[0])
+            crops[artist["slug"]] = (x0, y0, x1, y1, flip_x)
+    return crops
+
+
+def image_size(path: Path) -> tuple[int, int]:
+    result = subprocess.run(["sips", "-g", "pixelWidth", "-g", "pixelHeight", str(path)], capture_output=True, text=True)
+    width = height = 0
+    for line in result.stdout.splitlines():
+        if "pixelWidth" in line:
+            width = int(line.split()[-1])
+        elif "pixelHeight" in line:
+            height = int(line.split()[-1])
+    if result.returncode != 0 or width <= 0 or height <= 0:
+        raise RuntimeError(result.stderr.strip() or f"could not read size of {path.name}")
+    return width, height
+
+
+def apply_crop(path: Path, crop: tuple[float, float, float, float, bool]) -> None:
+    x0, y0, x1, y1, flip_x = crop
+    width, height = image_size(path)
+    left = max(0, min(width - 1, round(x0 * width)))
+    top = max(0, min(height - 1, round(y0 * height)))
+    crop_width = max(1, min(width - left, round((x1 - x0) * width)))
+    crop_height = max(1, min(height - top, round((y1 - y0) * height)))
+    full = x0 <= 0.01 and y0 <= 0.01 and x1 >= 0.99 and y1 >= 0.99
+    if full and not flip_x:
+        return
+    temp = path.with_suffix(".crop.jpg")
+    if not full:
+        result = subprocess.run(
+            [
+                "sips",
+                "--cropOffset",
+                str(top),
+                str(left),
+                "--cropToHeightWidth",
+                str(crop_height),
+                str(crop_width),
+                str(path),
+                "--out",
+                str(temp),
+            ],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.PIPE,
+            text=True,
+        )
+        if result.returncode != 0 or not temp.exists():
+            raise RuntimeError(result.stderr.strip() or f"crop failed for {path.name}")
+    else:
+        temp.write_bytes(path.read_bytes())
+    if flip_x:
+        flipped = subprocess.run(["sips", "-f", "horizontal", str(temp)], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, text=True)
+        if flipped.returncode != 0:
+            temp.unlink(missing_ok=True)
+            raise RuntimeError(flipped.stderr.strip() or f"flip failed for {path.name}")
+    temp.replace(path)
+
+
+def crop_existing_portraits() -> None:
+    """Write the interview crop to card.jpg. portrait.jpg stays the full photo."""
+
+    artists = build()
+    crops = portrait_crops(artists)
+    print(f"crops {len(crops)}")
+    for artist in artists:
+        crop = crops.get(artist["slug"])
+        source = OUT_IMG / artist["slug"] / "portrait.jpg"
+        dest = OUT_IMG / artist["slug"] / "card.jpg"
+        if crop is None or not source.exists():
+            print("skip", artist["slug"])
+            continue
+        dest.write_bytes(source.read_bytes())
+        apply_crop(dest, crop)
+        x0, y0, x1, y1, flip_x = crop
+        print(f"  {artist['slug']}: {x1 - x0:.2f}x{y1 - y0:.2f} flip={flip_x}")
+
+
+def convert(source: Path, dest: Path, max_edge: int) -> bool:
     dest.parent.mkdir(parents=True, exist_ok=True)
     if dest.exists() and dest.stat().st_size > 0 and dest.stat().st_mtime >= source.stat().st_mtime:
-        return
+        return False
     result = subprocess.run(
         ["sips", "-s", "format", "jpeg", "-s", "formatOptions", "82", "-Z", str(max_edge), str(source), "--out", str(dest)],
         stdout=subprocess.DEVNULL,
@@ -327,6 +497,7 @@ def convert(source: Path, dest: Path, max_edge: int) -> None:
     )
     if result.returncode != 0 or not dest.exists():
         raise RuntimeError(result.stderr.strip() or f"sips failed for {source.name}")
+    return True
 
 
 def main() -> None:
@@ -396,4 +567,7 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    if "--crop-only" in sys.argv:
+        crop_existing_portraits()
+    else:
+        main()

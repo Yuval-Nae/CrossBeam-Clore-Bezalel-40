@@ -8,6 +8,39 @@ const COPY = {
   ar: { search: "البحث عن الفنانين", empty: "لا يوجد فنانون.", back: "كل الفنانين" },
 };
 
+const CREDITS = {
+  en: [
+    "Curators: Ilanit Konopny and Abraham Kritzman",
+    "Associate Curator: Mina Reingold",
+    "Producer: Suhaila Abu Hadba Mounayer",
+    "Concept and Graphic Design: Yuval Nae and Efrat Shmuely",
+    "Interviews, Content Editing, and Production: Yuval Keshet",
+    "Portrait Photography: Ariel Hacohen",
+    "English Translation: Yuval Keshet",
+    "Arabic Translation: Jenan Bassoul and Dr. Ruba Samaan",
+  ],
+  he: [
+    "אוצרים: אילנית קונופני ואברהם קריצמן",
+    "אוצרת משנה: מינה ריינגולד",
+    "מפיקה: סוהיילה אבו הדבה מונייר",
+    "קונספט ועיצוב גרפי: יובל נאה ואפרת שמואלי",
+    "ראיונות, עריכת תוכן והפקה: יובל קשת",
+    "צילום דיוקנאות: אריאל הכהן",
+    "תרגום לאנגלית: יובל קשת",
+    "תרגום לערבית: ז'נאן בסול, ד״ר רובא סמעאן",
+  ],
+  ar: [
+    "القيّمان: إيلانيت كونوبوني وأبرهام كريتسمان",
+    "نائبة القيّمين: مينا رينغولد",
+    "تنفيذ: سهيلة أبو هدبة منيّر",
+    "الفكرة وتصميم الجرافيك: يوفال نائية وإفرات شموئيلي",
+    "المقابلات، تحرير المحتوى والإنتاج: يوفال كيشت",
+    "تصوير البورتريهات: أريئيل هكوهن",
+    "ترجمة للإنجليزيّة: يوفال كيشت",
+    "ترجمة للعربيّة: جنان بصول، د. ربى سمعان",
+  ],
+};
+
 const state = {
   lang: "en",
   data: null,
@@ -18,6 +51,10 @@ const state = {
 
 const searchIcon = `<svg class="search-toggle" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle cx="9" cy="9" r="6.25" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M14 14.5 L20 20.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>`;
 const arrowIcon = `<svg class="arrow" viewBox="0 0 20 20" width="19" height="19" aria-hidden="true"><path d="M4 4 L15 15 M7.5 15 H15 V7.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="miter"/></svg>`;
+const chevron = (direction) => {
+  const path = direction === "left" ? "M14.5 5 L8 12 L14.5 19" : "M9.5 5 L16 12 L9.5 19";
+  return `<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="${path}" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="miter"/></svg>`;
+};
 
 function preferredLang() {
   const stored = localStorage.getItem(STORAGE_KEY);
@@ -65,11 +102,25 @@ function matches(artist, query) {
   return haystack.includes(query.toLowerCase());
 }
 
+function sortName(artist, lang) {
+  const name = artist.name?.[lang] || artist.name?.en || "";
+  if (lang === "ar") return name.replace(/^(?:ال|أل|إل)/, "");
+  return name;
+}
+
+function visibleArtists() {
+  const lang = state.lang;
+  const compare = new Intl.Collator(lang, { sensitivity: "base", numeric: true }).compare;
+  return state.data.artists
+    .filter((artist) => matches(artist, state.query.trim()))
+    .sort((a, b) => compare(sortName(a, lang), sortName(b, lang)));
+}
+
 function renderHeaderStart() {
   const slot = document.querySelector("#header-start");
   const slug = artistSlug();
   if (slug) {
-    slot.innerHTML = `<a class="icon-button" href="./" aria-label="${escapeHtml(COPY[state.lang].back)}">&lt;</a>`;
+    slot.innerHTML = `<a class="icon-button back-button" href="./" aria-label="${escapeHtml(COPY[state.lang].back)}">${chevron("left")}</a>`;
     return;
   }
   if (state.searching) {
@@ -100,7 +151,7 @@ function renderHeaderStart() {
 function renderList() {
   const list = document.querySelector(".cards");
   if (!list || !state.data) return;
-  const artists = state.data.artists.filter((artist) => matches(artist, state.query.trim()));
+  const artists = visibleArtists();
   if (!artists.length) {
     list.innerHTML = `<li><p class="empty">${escapeHtml(COPY[state.lang].empty)}</p></li>`;
     return;
@@ -108,12 +159,10 @@ function renderList() {
   list.innerHTML = artists
     .map((artist) => {
       const names = nameOrder(state.lang)
-        .map((lang) => {
-          const dir = RTL.has(lang) ? "rtl" : "ltr";
-          return `<p class="${lang}" dir="${dir}">${escapeHtml(artist.name[lang])}</p>`;
-        })
+        .map((lang) => `<p class="${lang}">${escapeHtml(artist.name[lang])}</p>`)
         .join("");
-      return `<li><a class="card" href="./?artist=${encodeURIComponent(artist.slug)}"><span class="card-main"><img src="${escapeHtml(artist.portrait)}" alt="" /><span class="names">${names}</span></span>${arrowIcon}</a></li>`;
+      const card = artist.portrait.replace(/portrait\.jpg$/, "card.jpg");
+      return `<li><a class="card" href="./?artist=${encodeURIComponent(artist.slug)}"><span class="card-main"><img src="${escapeHtml(card)}" alt="" /><span class="names">${names}</span></span>${arrowIcon}</a></li>`;
     })
     .join("");
 }
@@ -121,11 +170,13 @@ function renderList() {
 function renderHome() {
   const title = state.data.title;
   return `
-    <section class="title-block">
-      <h1 class="title-en">${escapeHtml(title.en)}</h1>
-      <div class="title-row">
-        <p class="title-ar" dir="rtl">${escapeHtml(title.ar)}</p>
-        <p class="title-he" dir="rtl">${escapeHtml(title.he)}</p>
+    <section class="title-block" dir="ltr">
+      <div class="title-lockup">
+        <h1 class="title-en">${escapeHtml(title.en)}</h1>
+        <div class="title-row">
+          <p class="title-ar" dir="rtl">${escapeHtml(title.ar)}</p>
+          <p class="title-he" dir="rtl">${escapeHtml(title.he)}</p>
+        </div>
       </div>
     </section>
     <ul class="cards"></ul>
@@ -142,10 +193,8 @@ function renderArtist(slug) {
       (school) => `
         <div class="school">
           <p class="year">${escapeHtml(school.year)}</p>
-          <div class="school-copy">
-            <p class="school-name">${escapeHtml(field(school.name, lang))}</p>
-            <p>${escapeHtml(field(school.department, lang))}</p>
-          </div>
+          <p class="school-name">${escapeHtml(field(school.name, lang))}</p>
+          <p class="school-dept">${escapeHtml(field(school.department, lang))}</p>
         </div>`
     )
     .join("");
@@ -153,17 +202,17 @@ function renderArtist(slug) {
     .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
     .join("");
   const images = artist.gallery || [];
-  const index = Math.min(state.galleryIndex, Math.max(images.length - 1, 0));
-  state.galleryIndex = index;
+  state.galleryIndex = Math.min(state.galleryIndex, Math.max(images.length - 1, 0));
+  const slides = images
+    .map((src) => `<img src="${escapeHtml(src)}" alt="" draggable="false" />`)
+    .join("");
   const figure = images.length
-    ? `<figure class="gallery">
-        <img src="${escapeHtml(images[index])}" alt="" />
-        ${
-          images.length > 1
-            ? `<button class="gallery-nav prev" type="button" data-dir="-1" aria-label="Previous artwork">&lt;</button>
-               <button class="gallery-nav next" type="button" data-dir="1" aria-label="Next artwork">&gt;</button>`
-            : ""
-        }
+    ? `<figure class="gallery" dir="ltr">
+        ${images.length > 1 ? `<button class="gallery-nav prev" type="button" aria-label="Previous artwork">${chevron("left")}</button>` : ""}
+        <div class="gallery-viewport">
+          <div class="gallery-track">${slides}</div>
+        </div>
+        ${images.length > 1 ? `<button class="gallery-nav next" type="button" aria-label="Next artwork">${chevron("right")}</button>` : ""}
       </figure>`
     : "";
 
@@ -183,23 +232,125 @@ function renderArtist(slug) {
   `;
 }
 
+function renderFooter() {
+  const footer = document.querySelector("#site-footer");
+  if (!footer) return;
+  const rtl = RTL.has(state.lang);
+  footer.lang = state.lang;
+  footer.dir = rtl ? "rtl" : "ltr";
+  footer.textContent = CREDITS[state.lang].join(" · ");
+}
+
 function render() {
   const main = document.querySelector("#main");
   if (!main || !state.data) return;
   const slug = artistSlug();
   document.body.classList.toggle("home", !slug);
+  document.documentElement.dir = "ltr";
+  main.dir = RTL.has(state.lang) ? "rtl" : "ltr";
   if (!slug) document.title = "CrossBeam";
   renderHeaderStart();
+  renderFooter();
   main.innerHTML = slug ? renderArtist(slug) : renderHome();
   if (!slug) renderList();
-  main.querySelectorAll(".gallery-nav").forEach((button) => {
-    button.addEventListener("click", () => {
-      const artist = state.data.artists.find((item) => item.slug === slug);
-      const total = artist?.gallery?.length || 1;
-      state.galleryIndex = (state.galleryIndex + Number(button.dataset.dir) + total) % total;
-      render();
-    });
+  bindGallery(main.querySelector(".gallery"));
+}
+
+let galleryObserver = null;
+
+function bindGallery(root) {
+  galleryObserver?.disconnect();
+  galleryObserver = null;
+  if (!root) return;
+  const viewport = root.querySelector(".gallery-viewport");
+  const track = root.querySelector(".gallery-track");
+  const slides = track ? [...track.children] : [];
+  const count = slides.length;
+  if (!viewport || !track || count < 2) return;
+
+  const lastClone = slides[count - 1].cloneNode(true);
+  const firstClone = slides[0].cloneNode(true);
+  lastClone.setAttribute("aria-hidden", "true");
+  firstClone.setAttribute("aria-hidden", "true");
+  track.insertBefore(lastClone, slides[0]);
+  track.appendChild(firstClone);
+
+  let position = state.galleryIndex + 1;
+  let drag = null;
+
+  const place = (animate) => {
+    track.style.transition = animate ? "transform 420ms cubic-bezier(.22,.8,.3,1)" : "none";
+    const width = viewport.clientWidth;
+    const offset = drag?.dx || 0;
+    track.style.transform = `translate3d(${-position * width + offset}px,0,0)`;
+  };
+
+  const remember = () => {
+    state.galleryIndex = ((position - 1) % count + count) % count;
+  };
+
+  const settle = () => {
+    if (position !== 0 && position !== count + 1) return;
+    position = position === 0 ? count : 1;
+    remember();
+    place(false);
+  };
+
+  const go = (direction) => {
+    if (position === 0 || position === count + 1) settle();
+    position += direction;
+    drag = null;
+    remember();
+    place(true);
+  };
+
+  root.querySelector(".prev")?.addEventListener("click", () => go(-1));
+  root.querySelector(".next")?.addEventListener("click", () => go(1));
+  track.addEventListener("transitionend", (event) => {
+    if (event.target !== track || event.propertyName !== "transform") return;
+    settle();
   });
+
+  viewport.addEventListener("pointerdown", (event) => {
+    if (event.button !== 0) return;
+    if (position === 0 || position === count + 1) settle();
+    drag = { id: event.pointerId, x: event.clientX, y: event.clientY, dx: 0, axis: "" };
+  });
+  viewport.addEventListener("pointermove", (event) => {
+    if (!drag || event.pointerId !== drag.id) return;
+    const dx = event.clientX - drag.x;
+    const dy = event.clientY - drag.y;
+    if (!drag.axis) {
+      if (Math.hypot(dx, dy) < 8) return;
+      drag.axis = Math.abs(dx) > Math.abs(dy) ? "x" : "y";
+      if (drag.axis === "x") viewport.setPointerCapture(event.pointerId);
+    }
+    if (drag.axis !== "x") return;
+    drag.dx = dx;
+    place(false);
+  });
+  const finish = (event) => {
+    if (!drag || event.pointerId !== drag.id) return;
+    const dx = drag.axis === "x" ? drag.dx : 0;
+    drag = null;
+    if (dx < -48) position += 1;
+    else if (dx > 48) position -= 1;
+    position = Math.max(0, Math.min(count + 1, position));
+    remember();
+    place(true);
+  };
+  viewport.addEventListener("pointerup", finish);
+  viewport.addEventListener("pointercancel", finish);
+  galleryObserver = new ResizeObserver(() => place(false));
+  galleryObserver.observe(viewport);
+  place(false);
+}
+
+function openPage(url) {
+  history.pushState({}, "", url);
+  state.galleryIndex = 0;
+  render();
+  if (artistSlug()) window.scrollTo(0, 0);
 }
 
 async function boot() {
@@ -209,11 +360,13 @@ async function boot() {
   window.addEventListener("popstate", () => {
     state.galleryIndex = 0;
     render();
+    if (artistSlug()) window.scrollTo(0, 0);
   });
   document.body.addEventListener("click", (event) => {
-    const link = event.target.closest("a.card");
-    if (!link) return;
-    state.galleryIndex = 0;
+    const link = event.target.closest("a.card, a.back-button");
+    if (!link || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
+    event.preventDefault();
+    openPage(link.getAttribute("href"));
   });
   const response = await fetch("./data/artists.json", { cache: "no-cache" });
   state.data = await response.json();
