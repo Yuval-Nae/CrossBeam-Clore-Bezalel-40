@@ -179,12 +179,13 @@ body.home .site-footer { width: 100%; }
 
 .title-en {
   margin: 0;
-  font-family: var(--sentient);
-  font-weight: 200;
-  font-size: min(66px, calc((100vw - 40px) / 5.1));
-  line-height: 0.78;
-  letter-spacing: -0.03em;
-  text-align: center;
+  line-height: 0;
+}
+
+.title-logo {
+  width: min(332px, calc(100vw - 40px));
+  height: auto;
+  margin: 0 auto;
 }
 
 .title-row {

@@ -172,7 +172,7 @@ function renderHome() {
   return `
     <section class="title-block" dir="ltr">
       <div class="title-lockup">
-        <h1 class="title-en">${escapeHtml(title.en)}</h1>
+        <h1 class="title-en"><img class="title-logo" src="assets/brand/crossbeam.svg" width="804" height="107" alt="${escapeHtml(title.en)}" /></h1>
         <div class="title-row">
           <p class="title-ar" dir="rtl">${escapeHtml(title.ar)}</p>
           <p class="title-he" dir="rtl">${escapeHtml(title.he)}</p>
