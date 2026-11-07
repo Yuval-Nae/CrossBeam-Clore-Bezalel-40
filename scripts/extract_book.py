@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import re
+import struct
 import subprocess
 import sys
 import unicodedata
@@ -18,6 +19,7 @@ IDML = ROOT / "CB40-book" / "CB40Book_Shira_7.10.idml"
 LINKS = ROOT / "CB40-book" / "Links"
 OUT_JSON = ROOT / "data" / "artists.json"
 OUT_IMG = ROOT / "assets" / "artists"
+SRGB = Path("/System/Library/ColorSync/Profiles/sRGB Profile.icc")
 
 SKIP_TITLES = {"greetings", "scholarship recipients", "index", "works"}
 
@@ -412,6 +414,95 @@ def portrait_crops(artists: list[dict]) -> dict[str, tuple[float, float, float, 
     return crops
 
 
+def strip_icc(data: bytes) -> bytes:
+    """Drop the embedded press profile. The pixels are already sRGB."""
+
+    if data[:2] != b"\xff\xd8":
+        return data
+    out = bytearray(data[:2])
+    index = 2
+    while index + 1 < len(data):
+        if data[index] != 0xFF:
+            out += data[index:]
+            break
+        marker = data[index + 1]
+        if marker == 0xDA:
+            out += data[index:]
+            break
+        if marker == 0x01 or 0xD0 <= marker <= 0xD9:
+            out += data[index : index + 2]
+            index += 2
+            continue
+        if index + 4 > len(data):
+            out += data[index:]
+            break
+        length = struct.unpack(">H", data[index + 2 : index + 4])[0]
+        chunk = data[index : index + 2 + length]
+        if marker == 0xE2 and chunk[4:16] == b"ICC_PROFILE":
+            index += 2 + length
+            continue
+        out += chunk
+        index += 2 + length
+    return bytes(out)
+
+
+def to_web_jpeg(source: Path, dest: Path, max_edge: int, quality: int) -> None:
+    """Convert a print JPEG to an sRGB file sized for the site."""
+
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    temp = dest.with_name(dest.stem + ".web.jpg")
+    width, height = image_size(source)
+    command = [
+        "sips",
+        "-m",
+        str(SRGB),
+        "-s",
+        "format",
+        "jpeg",
+        "-s",
+        "formatOptions",
+        str(quality),
+    ]
+    if max(width, height) > max_edge:
+        command.extend(["-Z", str(max_edge)])
+    command.extend([str(source), "--out", str(temp)])
+    result = subprocess.run(
+        command,
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.PIPE,
+        text=True,
+    )
+    if result.returncode != 0 or not temp.exists():
+        temp.unlink(missing_ok=True)
+        raise RuntimeError(result.stderr.strip() or f"sips failed for {source.name}")
+    temp.write_bytes(strip_icc(temp.read_bytes()))
+    temp.replace(dest)
+
+
+def web_settings(path: Path) -> tuple[int, int]:
+    if path.name == "card.jpg":
+        return 600, 80
+    if path.name == "portrait.jpg":
+        return 900, 72
+    return 1200, 68
+
+
+def recompress_existing() -> None:
+    files = sorted(OUT_IMG.glob("*/*.jpg"))
+    before = 0
+    after = 0
+    for path in files:
+        edge, quality = web_settings(path)
+        size = path.stat().st_size
+        before += size
+        temp = path.with_name(path.stem + ".recompress.jpg")
+        to_web_jpeg(path, temp, edge, quality)
+        temp.replace(path)
+        after += path.stat().st_size
+        print(f"  {path.relative_to(OUT_IMG)} {size // 1024}KB -> {path.stat().st_size // 1024}KB", flush=True)
+    print(f"{len(files)} files, {before / 1e6:.1f}MB -> {after / 1e6:.1f}MB")
+
+
 def image_size(path: Path) -> tuple[int, int]:
     result = subprocess.run(["sips", "-g", "pixelWidth", "-g", "pixelHeight", str(path)], capture_output=True, text=True)
     width = height = 0
@@ -485,18 +576,11 @@ def crop_existing_portraits() -> None:
         print(f"  {artist['slug']}: {x1 - x0:.2f}x{y1 - y0:.2f} flip={flip_x}")
 
 
-def convert(source: Path, dest: Path, max_edge: int) -> bool:
+def convert(source: Path, dest: Path, max_edge: int, quality: int = 72) -> bool:
     dest.parent.mkdir(parents=True, exist_ok=True)
     if dest.exists() and dest.stat().st_size > 0 and dest.stat().st_mtime >= source.stat().st_mtime:
         return False
-    result = subprocess.run(
-        ["sips", "-s", "format", "jpeg", "-s", "formatOptions", "82", "-Z", str(max_edge), str(source), "--out", str(dest)],
-        stdout=subprocess.DEVNULL,
-        stderr=subprocess.PIPE,
-        text=True,
-    )
-    if result.returncode != 0 or not dest.exists():
-        raise RuntimeError(result.stderr.strip() or f"sips failed for {source.name}")
+    to_web_jpeg(source, dest, max_edge, quality)
     return True
 
 
@@ -540,7 +624,7 @@ def main() -> None:
                 continue
             rel = f"assets/artists/{artist['slug']}/work-{index:02d}.jpg"
             try:
-                convert(source, ROOT / rel, 1600)
+                convert(source, ROOT / rel, 1200, 68)
             except RuntimeError as error:
                 print("CONVERT", artist["slug"], error)
                 continue
@@ -569,5 +653,7 @@ def main() -> None:
 if __name__ == "__main__":
     if "--crop-only" in sys.argv:
         crop_existing_portraits()
+    elif "--recompress" in sys.argv:
+        recompress_existing()
     else:
         main()
