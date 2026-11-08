@@ -14,9 +14,11 @@ const CREDITS = {
     "Associate Curator: Mina Reingold",
     "Producer: Suhaila Abu Hadba Mounayer",
     "Concept and Graphic Design: Yuval Nae and Efrat Shmuely",
+    "Exhibition Design Consultation: Alexandra Topaz and Ali Ben-Arieh",
     "Interviews, Content Editing, and Production: Yuval Keshet",
     "Portrait Photography: Ariel Hacohen",
     "English Translation: Yuval Keshet",
+    "Hebrew Copy-Editing: Ronit Rosenthal",
     "Arabic Translation: Jenan Bassoul and Dr. Ruba Samaan",
   ],
   he: [
@@ -24,9 +26,11 @@ const CREDITS = {
     "אוצרת משנה: מינה ריינגולד",
     "מפיקה: סוהיילה אבו הדבה מונייר",
     "קונספט ועיצוב גרפי: יובל נאה ואפרת שמואלי",
+    "ליווי עיצוב חלל: אלכסנדרה טופז ועלי בן אריה",
     "ראיונות, עריכת תוכן והפקה: יובל קשת",
     "צילום דיוקנאות: אריאל הכהן",
     "תרגום לאנגלית: יובל קשת",
+    "עריכת לשון עברית: רונית רוזנטל",
     "תרגום לערבית: ז'נאן בסול, ד״ר רובא סמעאן",
   ],
   ar: [
@@ -34,9 +38,11 @@ const CREDITS = {
     "نائبة القيّمين: مينا رينغولد",
     "تنفيذ: سهيلة أبو هدبة منيّر",
     "الفكرة وتصميم الجرافيك: يوفال نائية وإفرات شموئيلي",
+    "مرافقة تصميم الحيّز: ألكساندرا طوباز وعِيلي بن أرييه",
     "المقابلات، تحرير المحتوى والإنتاج: يوفال كيشت",
     "تصوير البورتريهات: أريئيل هكوهن",
     "ترجمة للإنجليزيّة: يوفال كيشت",
+    "تحرير لغويّ للنسخة العبريّة: رونيت روزنطال",
     "ترجمة للعربيّة: جنان بصول، د. ربى سمعان",
   ],
 };
@@ -162,7 +168,7 @@ function renderList() {
         .map((lang) => `<p class="${lang}">${escapeHtml(artist.name[lang])}</p>`)
         .join("");
       const card = artist.portrait.replace(/portrait\.jpg$/, "card.jpg");
-      return `<li><a class="card" href="./?artist=${encodeURIComponent(artist.slug)}"><span class="card-main"><img src="${escapeHtml(card)}" alt="" /><span class="names">${names}</span></span>${arrowIcon}</a></li>`;
+      return `<li><a class="card" href="./?artist=${encodeURIComponent(artist.slug)}"><span class="card-main"><span class="card-photo"><img src="${escapeHtml(card)}" alt="" /></span><span class="names">${names}</span></span>${arrowIcon}</a></li>`;
     })
     .join("");
 }
@@ -283,6 +289,12 @@ function bindGallery(root) {
     const width = viewport.clientWidth;
     const offset = drag?.dx || 0;
     track.style.transform = `translate3d(${-position * width + offset}px,0,0)`;
+    const tallest = Math.round(
+      Math.max(0, ...[...track.children].map((img) => img.getBoundingClientRect().height))
+    );
+    if (tallest > 0 && Math.round(viewport.getBoundingClientRect().height) !== tallest) {
+      viewport.style.height = `${tallest}px`;
+    }
   };
 
   const remember = () => {
@@ -341,6 +353,9 @@ function bindGallery(root) {
   };
   viewport.addEventListener("pointerup", finish);
   viewport.addEventListener("pointercancel", finish);
+  track.querySelectorAll("img").forEach((img) => {
+    if (!img.complete) img.addEventListener("load", () => place(false), { once: true });
+  });
   galleryObserver = new ResizeObserver(() => place(false));
   galleryObserver.observe(viewport);
   place(false);
