@@ -3,9 +3,9 @@ const RTL = new Set(["he", "ar"]);
 const STORAGE_KEY = "cb-lang";
 
 const COPY = {
-  en: { search: "Search artists", empty: "No artists match.", back: "All artists" },
-  he: { search: "חיפוש אמנים", empty: "לא נמצאו אמנים.", back: "כל האמנים" },
-  ar: { search: "البحث عن الفنانين", empty: "لا يوجد فنانون.", back: "كل الفنانين" },
+  en: { search: "Search artists", empty: "No artists match.", back: "All artists", previous: "Previous artist", next: "Next artist" },
+  he: { search: "חיפוש אמנים", empty: "לא נמצאו אמנים.", back: "כל האמנים", previous: "האמן הקודם", next: "האמן הבא" },
+  ar: { search: "البحث عن الفنانين", empty: "لا يوجد فنانون.", back: "كل الفنانين", previous: "الفنان السابق", next: "الفنان التالي" },
 };
 
 const CREDITS = {
@@ -108,18 +108,33 @@ function matches(artist, query) {
   return haystack.includes(query.toLowerCase());
 }
 
-function sortName(artist, lang) {
-  const name = artist.name?.[lang] || artist.name?.en || "";
-  if (lang === "ar") return name.replace(/^(?:ال|أل|إل)/, "");
-  return name;
+function familyName(artist, lang) {
+  const name = (artist.name?.[lang] || artist.name?.en || "").trim();
+  const parts = name.split(/\s+/).filter(Boolean);
+  let family = parts.at(-1) || name;
+  if (lang === "ar") family = family.replace(/^(?:ال|أل|إل)/, "");
+  return family;
+}
+
+function orderedArtists() {
+  const lang = state.lang;
+  const compare = new Intl.Collator(lang, { sensitivity: "base", numeric: true }).compare;
+  return [...state.data.artists].sort((a, b) => compare(familyName(a, lang), familyName(b, lang)));
 }
 
 function visibleArtists() {
-  const lang = state.lang;
-  const compare = new Intl.Collator(lang, { sensitivity: "base", numeric: true }).compare;
-  return state.data.artists
-    .filter((artist) => matches(artist, state.query.trim()))
-    .sort((a, b) => compare(sortName(a, lang), sortName(b, lang)));
+  const query = state.query.trim();
+  return orderedArtists().filter((artist) => matches(artist, query));
+}
+
+function artistNeighbors(slug) {
+  const artists = orderedArtists();
+  const index = artists.findIndex((artist) => artist.slug === slug);
+  if (index < 0 || artists.length < 2) return { prev: null, next: null };
+  return {
+    prev: artists[(index - 1 + artists.length) % artists.length],
+    next: artists[(index + 1) % artists.length],
+  };
 }
 
 function renderHeaderStart() {
@@ -234,8 +249,23 @@ function renderArtist(slug) {
       </section>
       <section class="body-text">${paragraphs}</section>
       ${figure}
+      ${renderArtistPager(slug, lang)}
     </article>
   `;
+}
+
+function renderArtistPager(slug, lang) {
+  const { prev, next } = artistNeighbors(slug);
+  if (!prev || !next) return "";
+  const link = (artist, direction) => {
+    const name = artist.name[lang] || artist.name.en;
+    const label = `${COPY[lang][direction]}: ${name}`;
+    const icon = chevron(direction === "previous" ? "left" : "right");
+    const text = `<span dir="${RTL.has(lang) ? "rtl" : "ltr"}">${escapeHtml(name)}</span>`;
+    const inner = direction === "previous" ? `${icon}${text}` : `${text}${icon}`;
+    return `<a class="pager-link ${direction}" href="./?artist=${encodeURIComponent(artist.slug)}" aria-label="${escapeHtml(label)}">${inner}</a>`;
+  };
+  return `<nav class="artist-pager" dir="ltr" aria-label="Artists">${link(prev, "previous")}${link(next, "next")}</nav>`;
 }
 
 function renderFooter() {
@@ -378,7 +408,7 @@ async function boot() {
     if (artistSlug()) window.scrollTo(0, 0);
   });
   document.body.addEventListener("click", (event) => {
-    const link = event.target.closest("a.card, a.back-button");
+    const link = event.target.closest("a.card, a.back-button, a.pager-link");
     if (!link || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
     event.preventDefault();
     openPage(link.getAttribute("href"));
