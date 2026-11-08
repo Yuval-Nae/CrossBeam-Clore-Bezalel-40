@@ -53,6 +53,7 @@ const state = {
   query: "",
   searching: false,
   galleryIndex: 0,
+  homeScroll: 0,
 };
 
 const searchIcon = `<svg class="search-toggle" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle cx="9" cy="9" r="6.25" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M14 14.5 L20 20.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>`;
@@ -73,6 +74,21 @@ function preferredLang() {
 
 function artistSlug() {
   return new URLSearchParams(window.location.search).get("artist");
+}
+
+function pageUrl(artist) {
+  const params = new URLSearchParams();
+  if (state.searching) params.set("q", state.query);
+  if (artist) params.set("artist", artist);
+  const search = params.toString();
+  return search ? `./?${search}` : "./";
+}
+
+function syncSearchFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  if (!params.has("q")) return;
+  state.searching = true;
+  state.query = params.get("q") ?? "";
 }
 
 function escapeHtml(value) {
@@ -141,7 +157,7 @@ function renderHeaderStart() {
   const slot = document.querySelector("#header-start");
   const slug = artistSlug();
   if (slug) {
-    slot.innerHTML = `<a class="icon-button back-button" href="./" aria-label="${escapeHtml(COPY[state.lang].back)}">${chevron("left")}</a>`;
+    slot.innerHTML = `<a class="icon-button back-button" href="${pageUrl()}" aria-label="${escapeHtml(COPY[state.lang].back)}">${chevron("left")}</a>`;
     return;
   }
   if (state.searching) {
@@ -151,12 +167,14 @@ function renderHeaderStart() {
     input.setSelectionRange(input.value.length, input.value.length);
     input.addEventListener("input", () => {
       state.query = input.value;
+      history.replaceState({}, "", pageUrl());
       renderList();
     });
     input.addEventListener("keydown", (event) => {
       if (event.key === "Escape") {
         state.searching = false;
         state.query = "";
+        history.replaceState({}, "", pageUrl());
         render();
       }
     });
@@ -165,6 +183,7 @@ function renderHeaderStart() {
   slot.innerHTML = `<button class="icon-button" type="button" aria-label="${escapeHtml(COPY[state.lang].search)}">${searchIcon}</button>`;
   slot.querySelector("button").addEventListener("click", () => {
     state.searching = true;
+    history.replaceState({}, "", pageUrl());
     render();
   });
 }
@@ -183,7 +202,7 @@ function renderList() {
         .map((lang) => `<p class="${lang}">${escapeHtml(artist.name[lang])}</p>`)
         .join("");
       const card = artist.portrait.replace(/portrait\.jpg$/, "card.jpg");
-      return `<li><a class="card" href="./?artist=${encodeURIComponent(artist.slug)}"><span class="card-main"><span class="card-photo"><img src="${escapeHtml(card)}" alt="" /></span><span class="names">${names}</span></span>${arrowIcon}</a></li>`;
+      return `<li><a class="card" href="${pageUrl(artist.slug)}"><span class="card-main"><span class="card-photo"><img src="${escapeHtml(card)}" alt="" /></span><span class="names">${names}</span></span>${arrowIcon}</a></li>`;
     })
     .join("");
 }
@@ -263,7 +282,7 @@ function renderArtistPager(slug, lang) {
     const icon = chevron(direction === "previous" ? "left" : "right");
     const text = `<span dir="${RTL.has(lang) ? "rtl" : "ltr"}">${escapeHtml(name)}</span>`;
     const inner = direction === "previous" ? `${icon}${text}` : `${text}${icon}`;
-    return `<a class="pager-link ${direction}" href="./?artist=${encodeURIComponent(artist.slug)}" aria-label="${escapeHtml(label)}">${inner}</a>`;
+    return `<a class="pager-link ${direction}" href="${pageUrl(artist.slug)}" aria-label="${escapeHtml(label)}">${inner}</a>`;
   };
   return `<nav class="artist-pager" dir="ltr" aria-label="Artists">${link(prev, "previous")}${link(next, "next")}</nav>`;
 }
@@ -278,6 +297,7 @@ function renderFooter() {
 }
 
 function render() {
+  syncSearchFromUrl();
   const main = document.querySelector("#main");
   if (!main || !state.data) return;
   const slug = artistSlug();
@@ -392,10 +412,11 @@ function bindGallery(root) {
 }
 
 function openPage(url) {
+  if (!artistSlug()) state.homeScroll = window.scrollY;
   history.pushState({}, "", url);
   state.galleryIndex = 0;
   render();
-  if (artistSlug()) window.scrollTo(0, 0);
+  window.scrollTo(0, artistSlug() ? 0 : state.homeScroll);
 }
 
 async function boot() {
@@ -405,7 +426,7 @@ async function boot() {
   window.addEventListener("popstate", () => {
     state.galleryIndex = 0;
     render();
-    if (artistSlug()) window.scrollTo(0, 0);
+    window.scrollTo(0, artistSlug() ? 0 : state.homeScroll);
   });
   document.body.addEventListener("click", (event) => {
     const link = event.target.closest("a.card, a.back-button, a.pager-link");
