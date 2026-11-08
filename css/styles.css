@@ -230,7 +230,7 @@ body.home .site-footer { width: 100%; }
 
 .card-main {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 20px;
   min-width: 0;
 }
