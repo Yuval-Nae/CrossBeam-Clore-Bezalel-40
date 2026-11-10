@@ -327,7 +327,21 @@ body.home .site-footer { width: 100%; }
 
 .body-text p { margin: 0 0 20px; line-height: 24px; }
 
-.body-text p:last-child { margin-bottom: 0; }
+.body-text p:last-of-type { margin-bottom: 0; }
+
+.further-reading {
+  display: block;
+  width: fit-content;
+  margin-top: 28px;
+  margin-inline-start: 0;
+  margin-inline-end: auto;
+  padding: 10px 22px;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 1.25;
+}
 
 .gallery {
   position: relative;

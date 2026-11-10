@@ -47,6 +47,12 @@ const CREDITS = {
   ],
 };
 
+const FURTHER_READING = {
+  en: "For further reading",
+  he: "לקריאה נוספת",
+  ar: "لمزيد من المعلومات",
+};
+
 const state = {
   lang: "en",
   data: null,
@@ -257,6 +263,9 @@ function renderArtist(slug) {
     : "";
 
   document.title = `${artist.name[lang] || artist.name.en} · CrossBeam`;
+  const furtherReading = slug === "samadar-aukal"
+    ? `<a class="further-reading" href="assets/reading/al-bassa.html">${escapeHtml(FURTHER_READING[state.lang])}</a>`
+    : "";
   return `
     <article dir="${dir}">
       <h1 class="artist-name ${lang}">${escapeHtml(artist.name[lang])}</h1>
@@ -266,7 +275,7 @@ function renderArtist(slug) {
         <p class="born">${escapeHtml(field(artist.born, lang))}</p>
         <div>${schools}</div>
       </section>
-      <section class="body-text">${paragraphs}</section>
+      <section class="body-text">${paragraphs}${furtherReading}</section>
       ${figure}
       ${renderArtistPager(slug, lang)}
     </article>
